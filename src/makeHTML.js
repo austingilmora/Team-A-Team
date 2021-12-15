@@ -16,7 +16,7 @@ const generateEmployees = function(team) {
                         <div class="card-body">
                             <ul class="list-group">
                                 <li class="list-group-item">ID: ${id}</li>
-                                <li class="list-group-item">Email: ${email}</li>
+                                <li class="list-group-item">Email: <a href="mailto:${email}">${email}</a> </li>
                                 <li class="list-group-item">Office number: ${officeNum}</li>
                             </ul>
                         </div>
@@ -40,8 +40,8 @@ const generateEmployees = function(team) {
                     <div class="card-body">
                         <ul class="list-group">
                             <li class="list-group-item">ID: ${id}</li>
-                            <li class="list-group-item">Email: ${email}</li>
-                            <li class="list-group-item">Github: ${github}</li>
+                            <li class="list-group-item">Email: <a href="mailto:${email}">${email}</a></li>
+                            <li class="list-group-item">Github: <a href="https://github.com/${github}">${github}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -62,7 +62,7 @@ const generateEmployees = function(team) {
                         <div class="card-body">
                             <ul class="list-group">
                                 <li class="list-group-item">ID: ${id}</li>
-                                <li class="list-group-item">Email: ${email}</li>
+                                <li class="list-group-item">Email: <a href="mailto:${email}">${email}</a></li>
                                 <li class="list-group-item">School: ${school}</li>
                             </ul>
                         </div>
