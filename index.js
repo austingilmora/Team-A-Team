@@ -3,7 +3,8 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const team = [];
-
+const makeHTML = require('./src/makeHTML');
+const fs = require('fs');
 
 const startTeam = function() {
     inquirer
@@ -131,8 +132,17 @@ const doIntern = function() {
 }
 
 const createTeam = function() {
-    console.log(team);
+    const pageHTML = makeHTML(team);
+    
+    fs.writeFile('./dist/index.html', pageHTML, err => {
+        if (err) {
+            console.log(err);
+            return;
+        }
+    })
 }
+
+
 
 
 startTeam();
